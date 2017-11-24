@@ -46,38 +46,38 @@ ____________________________________________________
 
   2. Component 단위로 BroadcastReceiver 사용하기
 
-    - BroadcastReceiver 를 상속받은 class 를 사용하는 측에서만 Android 에서 발생하는 BroadCast 를 수신받을 수 있다.
+      - BroadcastReceiver 를 상속받은 class 를 사용하는 측에서만 Android 에서 발생하는 BroadCast 를 수신받을 수 있다.
 
-    - Component 에서 설정 ( Code 는 Activity 로 작성 )
+      - Component 에서 설정 ( Code 는 Activity 로 작성 )
 
-    ```java
-    public class MainActivity extends BaseActivity {
+      ```java
+      public class MainActivity extends BaseActivity {
 
-        public MainActivity() {
-            // Permission 설정
-            super(new String[]{Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS});
-        }
+          public MainActivity() {
+              // Permission 설정
+              super(new String[]{Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS});
+          }
 
-        @Override
-        public void init() {
-            setContentView(R.layout.activity_main);
-        }
+          @Override
+          public void init() {
+              setContentView(R.layout.activity_main);
+          }
 
-        @Override
-        protected void onNewIntent(Intent intent) {
-            super.onNewIntent(intent);
-        }
+          @Override
+          protected void onNewIntent(Intent intent) {
+              super.onNewIntent(intent);
+          }
 
-        // Component 단위로 Receiver 를 관리하려면
-        // registerReceiver 로 Receiver 를 등록해주고,
-        // unregisterReceiver 로 Receiver 를 해제한다.
-        @Override
-        protected void onStart() {
-            super.onStart();
-            registerReceiver(new MyReceiver(), new IntentFilter("android.provider.Telephony.SMS_RECEIVED"));
-        }
-    }
-    ```
+          // Component 단위로 Receiver 를 관리하려면
+          // registerReceiver 로 Receiver 를 등록해주고,
+          // unregisterReceiver 로 Receiver 를 해제한다.
+          @Override
+          protected void onStart() {
+              super.onStart();
+              registerReceiver(new MyReceiver(), new IntentFilter("android.provider.Telephony.SMS_RECEIVED"));
+          }
+      }
+      ```
 
 - BroadCastReciver 작성
 
