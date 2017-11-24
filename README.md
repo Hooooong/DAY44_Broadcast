@@ -12,7 +12,7 @@ ____________________________________________________
 
 - BroadCasts 란?
 
-  > 4대 Component (Activity, Service, BroadcastReceiver, ContentProvider) 중 하나로 안드로이드 단말기에서 발생하는 다양한 이벤트/정보를 받고 반응하는 컴포넌트이다. 예를 들면 시스템부팅, 배터리 부족, 전화/문자 수신, 네트워크 끊김을 알려주는 것이 BroadCast 이다. 이렇게 BroadCast 된 이벤트는 각 APP에서 필요한 방송 이벤트를 받아들이고, 이벤트에 대한 처리를 BroadCastReciver를 통해 할 수 있게 해준다.
+  > 4대 Component (Activity, Service, BroadcastReceiver, ContentProvider) 중 하나로 안드로이드 단말기에서 발생하는 다양한 이벤트/정보를 받고 반응하는 컴포넌트이다. 예를 들면 시스템부팅, 배터리 부족, 전화/문자 수신, 네트워크 끊김을 알려주는 것이 BroadCast 이다. 이렇게 BroadCast 된 이벤트는 각 APP에서 필요한 BroadCast 이벤트를 받아들이고, 이벤트에 대한 처리를 BroadCastReciver를 통해 할 수 있게 해준다.
 
 - BroadCastReciver 사용법
 
