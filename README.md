@@ -46,7 +46,7 @@ ____________________________________________________
 
   2. Component 단위로 BroadcastReceiver 사용하기
 
-    - BroadcastReceiver 를 상속받은 clas 를 사용하는 측에서만 Android 에서 발생하는 BroadCast 를 수신받을 수 있다.
+    - BroadcastReceiver 를 상속받은 class 를 사용하는 측에서만 Android 에서 발생하는 BroadCast 를 수신받을 수 있다.
 
     - Component 에서 설정 ( Code 는 Activity 로 작성 )
 
